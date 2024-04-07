@@ -1,0 +1,109 @@
+rm(list=ls())
+m=matrix(c(1,2,3,4,5,6,7,8),nrow=4)
+dat=as.data.frame(m)
+dat2=data.frame(a = 1:3,b =letters[10:12],c=seq(as.Date("2004-01-01"),by="week",length.out=3),stringsAsFactors=TRUE)
+m2=data.matrix(dat2[1:2])
+class(dat2[1:2])
+dat2[1:2]
+df2<-data.frame(x=11:15,y=15:11)
+df1<-data.frame(x=10:14,y=14:10)
+array1<-array(data=c(unlist(df1),unlist(df2)),dim=c(5,2,2),dimnames=list(rownames(df1),colnames(df1)))
+m1=matrix(c(1:10),nrow=5,ncol=6)
+a_m1<-apply(m1,2,sum)
+movies<-c("SPIDERMAN","BATMAN","VERTIGO","CHINATOWN")
+mvies_lower<-sapply(movies,tolower)
+avg<-function(x){
+  (min(x)+max(x))/2
+}
+any(grepl("xlsx",install.packages()))
+str(dat)
+dat["V1"]
+dat$V1
+dat[,"V1"]
+class(dat["V1"])
+dat[["V1"]]
+class(dat[["V1"]])
+str(dat[,"V1"])
+head(dat[,"V1"],2)
+tail(dat[,"V1"],2)
+sex<-factor(c("male","female","female","male"))
+nlevels(sex)
+plot(sex)
+sex2=c("male","female","female","female")
+plot(as.factor(sex2))
+dates=data.frame(year=c(2001,2002),month=c(1,3),day=c(2,5))
+date=paste(dates$year,dates$month,dates$day,sep="-")
+ymd(date)
+class(ymd(date))
+library(tidyverse)
+select(dat,V1)
+filter(dat,V1==1)
+filter(dat,V1>1)
+subs<-dat%>%
+  filter(V1>2)%>%
+  select(V2)
+subs
+new<-dat%>%
+  mutate(V1n=V1*100)
+download.file("tinyurl.com/dcmac2017dec/data/surveys_wide.csv",dest="data/surveys_wie.csv")
+library(tidyverse)
+datawide<-read.csv("data/surveys_wide.csv")
+view(datawide)
+head(datawide)
+data_gather<-datawide %>%
+  gather(key = species_abbrev, value = count, -c(month,day,year,plot_id))
+str(data_gather)
+data_gather
+tail(data_gather)
+plot1<-ggplot(data=datawide,aes(x=PB,y=DM))
+plot2<-plot1+geom_point(alpha=0.1,aes(color=PP))
+plot2
+plot1+geom_boxplot(aes(group=PB))+theme(panel.grid = element_blank())
+library(gridExtra)
+ggsave("testplot.png",plot2,width=15,height=10)
+
+Class<-as.factor(c(0,0,0,0,1,1,1,1,1))
+
+df<-mtcars
+x_vars1<-names(df[2:ncol(df)])
+x_vars<-paste(x_vars1,collapse = "+")
+x_vars
+library(caret)
+library(tidymodels)
+library(skimr)
+library(RANN)
+library(rvest)
+library(RCurl)
+library(dplyr)
+library(ggplot2)
+library(RCurl)
+URL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fss06hid.csv"
+download.file(URL,destfile="data/download_data.csv",mode="wb")
+autoget_data<-function(url){
+  url<-getURL(url)
+  data<-read.csv(textConection(url))
+  return(data)
+}
+
+
+library(ggmap)
+library(rjson)
+library(sf)
+library(leaflet)
+library(geojsonsf)
+library(dplyr)
+library(urltools)
+library(rdataretriever)
+library(reticulate)
+import("matplotlib")
+matplot:plot(1,1)
+py_config()
+import("Numpy")
+import("pandas")
+pip install retriever
+import("retriever")
+a["v1"]<-as.data.frame(apply(a["v1"],2,as.character))
+library(dbplyr)
+library(DBI)
+dbplyr::src_dbi(mammals)
+dbidisconnect(mammals)
