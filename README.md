@@ -1,1 +1,1 @@
-There are materials for the graduate students in 2024, who learn the methods for data-intensive ecology.
+THIS BRANCH IS DEPRICATED!!!!ALL VALID HOMEWORKS ARE IN THE MAIN BRANCH
